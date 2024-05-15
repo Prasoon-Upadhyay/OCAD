@@ -1,0 +1,53 @@
+
+
+.homepage--container { 
+
+    display: grid;
+    grid-template-columns: 1fr; 
+    text-align: center;
+    overflow-y: hidden;
+ 
+    opacity: 0;
+    transition: opacity 300ms linear;
+}
+
+.home--heading {
+    font-family: var(--ff--primary);
+    font-size: 2rem;
+    opacity: 0;
+    transform: translateX(-25px);
+    transition: all 300ms linear;
+}
+
+
+@media (min-width: 800px) {
+    
+
+    .home--heading {
+        font-size: 4rem;
+        overflow: hidden;
+    }
+
+    .homepage--container { 
+        padding: 0 7%;  
+        text-align: start; 
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .content--container {
+        
+        margin: 2rem 0;
+    }
+
+}
+
+.pageLoad {
+
+    opacity: 1
+}
+
+
+.textFadeRight {
+    opacity: 1;
+    transform: translateX(0);
+}

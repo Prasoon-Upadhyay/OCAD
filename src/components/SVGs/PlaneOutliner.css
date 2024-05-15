@@ -1,0 +1,59 @@
+circle, .ellipse4 {
+    animation: circleScaling 4s forwards infinite; 
+    animation-delay: 1500ms;
+}
+ 
+
+.plane--svg {
+    align-self: flex-start;
+    justify-self: flex-start; 
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 500ms linear;
+}
+
+
+#vector_1 {
+    stroke-dasharray: 1000; /* Length of the line path */
+    stroke-dashoffset: 1000; /* Initially hides the line */
+    stroke: black; /* Initial stroke color */
+    animation: drawLine 4s linear infinite; /* Animation duration and timing */
+    animation-delay: 1500ms;
+  }
+  
+  @keyframes drawLine {
+    0% {
+      stroke-dashoffset: 1500; /* Start with full line hidden */
+      stroke: black; /* Start with black stroke color */
+    }
+    50% {
+      stroke-dashoffset: 0; /* Fully reveal the line */
+      stroke: white; /* Change stroke color to white */
+    }
+    100% {
+        stroke-dashoffset: 1500; /* Start with full line hidden */
+        stroke: black; /* Start with black stroke color */
+      }
+  }
+
+@keyframes circleScaling {
+
+    0% {
+       opacity: 0;
+    }
+    
+    50% {
+        opacity: 1;
+    } 
+    
+    100% {
+        opacity: 0;
+    }
+}
+
+ 
+
+.planeFade {
+    opacity: 1;
+    transform: translateY(0);
+}
