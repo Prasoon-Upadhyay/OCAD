@@ -17,6 +17,11 @@
     opacity: 0;
     transform: translateX(-25px);
     transition: all 300ms linear;
+} 
+
+.plane--container svg {
+
+    width: 80%; 
 }
 
 
@@ -37,6 +42,10 @@
     .content--container {
         
         margin: 2rem 0;
+    }
+    .plane--container svg {
+    
+        width: 100%; 
     }
 
 }

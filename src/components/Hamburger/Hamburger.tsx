@@ -50,8 +50,7 @@ const Hamburger = ( { isActive, setIsActive } : {isActive:boolean, setIsActive: 
                 
                 <Link to = '/' className='hamburger--item '>Home</Link>
                 <Link to = '/' className='hamburger--item '>Dashboard</Link>
-                <Link to = '/' className='hamburger--item '>Models</Link>
-                <Link to = '/' className='hamburger--item '>DLC</Link>
+                <Link to = '/' className='hamburger--item '>Models</Link> 
                 <Link to = '/' className='hamburger--item '>About Us</Link>
             </ul>
         </>

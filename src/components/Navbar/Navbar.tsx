@@ -11,8 +11,6 @@ const Navbar = () => {
 
     const [isActive, setIsActive] = useState<boolean>(false)
 
-
-
     return (
         <nav  >
             <div className='navbar'>    
@@ -22,9 +20,8 @@ const Navbar = () => {
                 
                 <ul className='nav--items'>
                     <Link to = '/' className='nav--item'>Home</Link>
-                    <Link to = '/' className='nav--item'>Dashboard</Link>
-                    <Link to = '/' className='nav--item'>Models</Link>
-                    <Link to = '/' className='nav--item'>DLC</Link>
+                    <Link to = '/dashboard' className='nav--item'>Dashboard</Link>
+                    <Link to = '/models' className='nav--item'>Models</Link> 
                     <Link to = '/' className='nav--item'>About Us</Link>
                 </ul>
  

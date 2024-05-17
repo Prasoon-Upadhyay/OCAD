@@ -31,7 +31,7 @@ body {
 */
 
 
-img, picture, video, canvas, svg {
+img, picture, video, canvas {
   display: block;
   max-width: 100%;
 }
@@ -104,4 +104,10 @@ body {
 
 .btn:hover {
     opacity: .7;
+}
+
+
+.pageLoad {
+
+  opacity: 1
 }

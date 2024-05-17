@@ -1,0 +1,85 @@
+
+
+.stats--container {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+}
+
+
+.models--count--container {
+    justify-self: end;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    padding:  3rem;
+}
+
+.requests--container {
+    justify-self: start;
+    text-align: center;
+    padding:  3rem;
+}
+
+.stats--container h1 {
+    font-size: 4rem;
+    font-family: var(--ff--monospace);
+}
+
+
+.stats--container span {
+    font-family: var(--ff--secondary);
+}
+
+.stats--container a {
+    color: rgba(230, 236, 245, 0.488); 
+    font-family: var(--ff--secondary); 
+    transition: all 600ms linear;
+}
+ 
+
+.pinned--container h1 {
+
+    font-size: 4rem;
+    font-family: var(--ff--primary);
+}
+
+.pinned--container {
+    padding: 0 7%;
+}
+
+.pinned--message {
+    display: flex;
+    flex-direction: row;
+    font-family: var(--ff--monospace);
+}
+
+.pinned--message { 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 5px 0;
+}
+
+.pinned--message a {
+    opacity: .5;
+    transition: opacity 200ms ease-in-out;
+}
+
+.pinned--message a:hover {
+    opacity: 1;
+    color: #fff;
+    text-decoration: underline; 
+}
+
+.pinned--message svg {
+    transform: translateY(4px);
+    opacity: .5;
+}
+
+.stats--container a:hover {
+    text-decoration: underline;
+}
+ 
+
+.dashboard--container {
+    opacity: 0;
+    transition: opacity 300ms linear;
+}

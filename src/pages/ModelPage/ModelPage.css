@@ -1,0 +1,70 @@
+
+.about--file {
+
+    font-family: var(--ff--monospace);
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 3rem;
+    text-align: center;
+}
+
+.file--img { 
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    padding: 1rem;
+}
+
+.model--container {
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+}
+
+.file--date {
+    opacity: .5;
+    padding: 1rem 0;
+}
+
+.download--ico {
+    transform: translateY(2px);
+}
+
+.file--container {
+
+    display: grid;
+    grid-template-columns: 1fr; 
+    justify-items: center;
+}
+
+.file--name {
+    font-size: 2rem;
+    font-family: var(--ff--primary);
+    font-weight: bolder;
+
+}
+
+@media (min-width: 800px) {
+
+    .file--container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: start;
+    }
+
+    .file--img {
+        border: 0;
+        border-right: 1px solid rgba(255, 255, 255, .5);
+        justify-self: end;
+        padding: 1rem 2rem;
+    }
+    
+    .about--file {
+        text-align: start;
+    }
+    
+}
+
+
+.pageLoad {
+
+    opacity: 1
+}

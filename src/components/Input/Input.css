@@ -1,0 +1,10 @@
+
+.input-- {
+    background-color: inherit;
+    font-family: var(--ff--monospace);
+    outline: none;
+    color: #fff;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    padding: .5rem;
+}

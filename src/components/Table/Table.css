@@ -1,0 +1,35 @@
+
+tbody {
+    font-family: var(--ff--secondary);
+    font-weight: bolder; 
+    opacity: 0;
+    transition: opacity 200ms linear;
+}
+ 
+
+.table--footer { 
+    display: flex; 
+    margin: 1rem 0;
+}
+
+
+.btn--grp {
+
+    display: flex;
+    gap: .5rem;    
+}
+
+.grouped--btn {
+    
+    font-family: var(--ff--secondary);
+    padding: .875rem;
+    border: 3px solid rgba(255, 255, 255, .5);
+    cursor: pointer;
+    transition: all 300ms linear;
+    
+}
+
+
+.grouped--btn:hover {
+    background-color: rgba(255, 255, 255, .1);
+}
