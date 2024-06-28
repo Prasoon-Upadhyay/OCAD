@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar/Navbar"
 import PlaneOutliner from "../../components/SVGs/PlaneOutliner"
 import './HomePage.css'
 import { Link } from "react-router-dom"
+import { MdDashboard } from "react-icons/md";
 
 const HomePage = () => {
 
@@ -60,7 +61,7 @@ const HomePage = () => {
                   <h1  className="home--heading">Design Better.</h1>
               </div> 
 
-              <Button classnames=" btn--dashboard "><Link to = "/dashboard">Dashboard</Link></Button>
+              <Button classnames=" btn--dashboard "><Link to = "/dashboard">Dashboard <MdDashboard /> </Link></Button>
             </div>
             <div className="plane--container">
               <PlaneOutliner />

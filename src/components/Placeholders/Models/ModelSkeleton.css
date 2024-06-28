@@ -1,0 +1,14 @@
+
+
+.model--skeleton {
+    background-color: #4e4c4c50 ;   
+    animation: pulse 1.5s ease-in-out infinite;
+    height: 12px;
+}
+
+.skeleton--item { 
+    border: 15px solid #000000; 
+    border-left: 0; 
+}
+
+ 

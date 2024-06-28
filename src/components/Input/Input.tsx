@@ -1,23 +1,23 @@
 
  
 import { useState } from 'react'
-import './Input.css'
-import useModel from '../../hooks/useModel'
+import './Input.css' 
 
-const Input = ( { children, classnames } : { children: string, classnames ?: string } ) => {
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+    children: string;
+    classnames?: string;
+}
+const Input: React.FC<InputProps>= ( { children, classnames, ...rest }) => {
     
-    const [term, setTerm] = useState<string>('')
-    const { filterModelsBySearch, getAllModels } = useModel()
+    const [term, setTerm] = useState<string>('') 
 
     const handleChange = (e) => {
 
         setTerm(e.target.value)
-        
-        if (e.target.value === '') return getAllModels(1)
-        filterModelsBySearch(e.target.value)
+         
     }
 
-    return <input value={term} size={30} onChange={handleChange} className= {'input-- ' + classnames } placeholder = { children } />
+    return <input value={term} size={30} onChange={handleChange} className= {'input-- ' + classnames } placeholder = { children }    {...rest}  />
 }
 
-export default Input
+export default Input;

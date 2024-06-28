@@ -1,0 +1,174 @@
+{
+	"asset": {
+		"generator": "SOLIDWORKSGLTF",
+		"version" : "2.0"
+	},
+"extensionsUsed": [ "KHR_lights_punctual", "Solidworks_custom_properties", "KHR_draco_mesh_compression"],
+"extensionsRequired": [ "KHR_draco_mesh_compression" ],
+	"scene" : 0,
+	"scenes": [
+		{
+			"name": "Default - <Default>_Display State 1",
+			"nodes": [
+				0, 1]
+		}
+	],
+	"nodes": [
+		{
+			"matrix": [
+				0.707107,					0,					-0.707107,					0,
+				-0.408204,					0.816541,					-0.408204,					0,
+				0.577382,					0.577288,					0.577382,					0,
+				0.870576,					0.864484,					0.870973,					1
+			]
+			,"camera": 0
+			,"name": "current"		}
+,
+		{
+			"mesh": 0
+			,"name": "Drone Frame 2"		}
+	],
+	"cameras": [
+		{
+			"type": "orthographic",
+			"orthographic" : {
+				"xmag": 1,
+				"ymag" : 1,
+				"zfar" : 100,
+				"znear" : 0.01
+			}
+		}
+	],
+	"meshes" : [
+		{
+			"primitives" : [
+				{
+					"attributes" : {
+					"POSITION" : 1,
+					"NORMAL" : 2,
+					"TEXCOORD_0" : 3
+					},
+					"indices" : 0,
+					"mode": 4,
+					"material" : 0
+					,"extensions": {
+					"KHR_draco_mesh_compression": {
+					"bufferView": 0,
+					"attributes" : {
+					"POSITION": 0,
+					"NORMAL" : 1,
+					"TEXCOORD_0" : 2
+					}
+					}
+					}
+				},
+				{
+					"attributes" : {
+					"POSITION" : 5,
+					"NORMAL" : 6,
+					"TEXCOORD_0" : 7
+					},
+					"indices" : 4,
+					"mode": 4,
+					"material" : 1
+					,"extensions": {
+					"KHR_draco_mesh_compression": {
+					"bufferView": 1,
+					"attributes" : {
+					"POSITION": 0,
+					"NORMAL" : 1,
+					"TEXCOORD_0" : 2
+					}
+					}
+					}
+				}
+			]
+		}
+	],
+	"accessors" : [
+			{
+				"componentType" : 5123
+				,"count" : 22194
+				,"type" : "SCALAR"
+			},
+			{
+				"componentType" : 5126
+				,"count" : 8067
+				,"type" : "VEC3"
+				,"min" : [-6.49027228e-02, -5.21220277e-18, -3.23182046e-02]
+				,"max" : [8.36648718e-02, 4.30000015e-02, 3.23182046e-02]
+			},
+			{
+				"componentType" : 5126
+				,"count" : 8067
+				,"type" : "VEC3"
+			},
+			{
+				"componentType" : 5126
+				,"count" : 8067
+				,"type" : "VEC2"
+			},
+			{
+				"componentType" : 5123
+				,"count" : 138
+				,"type" : "SCALAR"
+			},
+			{
+				"componentType" : 5126
+				,"count" : 50
+				,"type" : "VEC3"
+				,"min" : [1.88269354e-02, 1.86083131e-02, 1.02921138e-02]
+				,"max" : [4.95132878e-02, 4.30000015e-02, 2.07921136e-02]
+			},
+			{
+				"componentType" : 5126
+				,"count" : 50
+				,"type" : "VEC3"
+			},
+			{
+				"componentType" : 5126
+				,"count" : 50
+				,"type" : "VEC2"
+			}
+	],
+	"materials": [
+			{
+				"pbrMetallicRoughness": {
+					"baseColorFactor": [
+						0.498039, 0.498039, 0.498039, 1
+					]
+					,"metallicFactor": 0
+					,"roughnessFactor": 1
+				}
+			},
+			{
+				"name": "color"
+				,"pbrMetallicRoughness": {
+					"baseColorFactor": [
+						0.792157, 0.819608, 0.933333, 0.321307
+					]
+					,"metallicFactor": 0
+					,"roughnessFactor": 0.17
+				}
+				,"alphaMode": "BLEND"
+			}
+	],
+	"bufferViews" : [
+			{
+				"buffer": 0
+				,"byteOffset" : 0
+				,"byteLength" : 35264
+			},
+			{
+				"buffer": 0
+				,"byteOffset" : 35264
+				,"byteLength" : 592
+			}
+	],
+	"buffers" : [
+			{
+				"byteLength": 35856
+				,"uri" : "data.bin"
+			}
+	]
+}

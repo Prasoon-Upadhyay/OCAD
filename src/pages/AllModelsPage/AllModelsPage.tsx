@@ -2,9 +2,10 @@ import { Suspense, lazy, useEffect, useRef } from "react"
 import Navbar from "../../components/Navbar/Navbar" 
 
 import './AllModelsPage.css'
-import Button from "../../components/Button/Button"
-import Input from "../../components/Input/Input"
-import { MdFilterAlt } from "react-icons/md";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { Link } from "react-router-dom"
+import SearchBar from "../../components/Input/SearchBar"
+import ModelSkeleton from "../../components/Placeholders/Models/ModelSkeleton";
 
 const Table = lazy(() => import('./../../components/Table/Table'))
 
@@ -43,7 +44,7 @@ const AllModelsPage = () => {
             <h1 className="models--container--heading">Models</h1>
             
             <div className="table--ops--container">
-                <Input classnames="table--search">Search...</Input> 
+                <SearchBar classnames="table--search">Search...</SearchBar> 
             
             </div>
             <table className="model--table">
@@ -56,7 +57,7 @@ const AllModelsPage = () => {
                     </tr>
                 </thead>
                 
-                <Suspense fallback = {<tbody><tr><td>Fetching...</td></tr></tbody>} >
+                <Suspense fallback = {<tbody><ModelSkeleton /> </tbody>} > 
                     <Table />
                 </Suspense>
             </table>
@@ -66,8 +67,8 @@ const AllModelsPage = () => {
                         Can't find what
                         you're looking for? 
                     </p>
-                    <p>Drop a request.</p>
-                    <Button classnames="req--btn">Request</Button>
+                     
+                    <Link to = "/requests"><p>Drop a request <FaExternalLinkAlt /> </p></Link>
             </div>
         </section>
                 

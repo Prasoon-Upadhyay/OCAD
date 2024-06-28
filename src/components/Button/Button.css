@@ -5,3 +5,31 @@
     margin: 3rem 0;
 
 } 
+
+
+.btn {
+    border-radius: 3rem;
+    background-color: #000;
+    border: 1px solid #fff;
+    padding: .5rem 2rem;
+    font-family: var(--ff--secondary);
+    color: #fff;
+    cursor: pointer;
+    transition: opacity .3s ease-in-out;
+}
+
+.invert--clrs {
+    background-color: #fff;
+    color: #000; 
+}
+
+.btn:hover {
+    opacity: .7;
+}
+
+.btn--toggle {
+    font-size: .675rem;
+    border-radius: 0;
+    padding: 0;
+    padding: .5rem .75rem;
+}

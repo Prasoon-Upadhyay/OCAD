@@ -1,9 +1,16 @@
 import { ReactNode } from "react"
 
-import './Button.css'
-const Button = ( { children, classnames } : { children : ReactNode, classnames ?: string } ) => {
 
-    return <button className={`btn ${classnames}`}>{children}</button>
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+    children: ReactNode;
+    classnames?: string;
+  }
+  
+import './Button.css'
+const Button: React.FC<ButtonProps> = ( { children, classnames, ...rest}) => {
+  
+
+    return <button  {...rest} className={`btn ${classnames}`}>{children}</button>
 }
 
 export default Button

@@ -7,6 +7,19 @@
 }
 
 
+.empty--msgs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--ff--secondary);
+}
+
+.empty--msgs img {
+    width: 5%;
+}
+
+
 .models--count--container {
     justify-self: end;
     text-align: center;
@@ -14,7 +27,7 @@
     padding:  3rem;
 }
 
-.requests--container {
+.requests--count--container {
     justify-self: start;
     text-align: center;
     padding:  3rem;

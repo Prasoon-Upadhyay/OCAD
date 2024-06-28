@@ -5,20 +5,27 @@ import useModel from '../../hooks/useModel'
 import { Model } from '../../assets/utils/types'
 
 import { useEffect, useRef, useState } from 'react'
-import './ModelPage.css'
-import FileIcon from './../../assets/FileIcon.svg'
+import './ModelPage.css' 
 import Button from '../../components/Button/Button'
 import { GoDownload } from "react-icons/go";
+import Viewer from '../../components/3DViewer/Viewer'
+import Modal from '../../components/Modal/Modal'
+import Preview from '../../components/ModelPreview/Preview'
 
 const ModelPage = () => {
 
 
+    const { models, getModelByID } = useModel();
     const param = useParams();
     const modelID: string = param.id as string;
-    const { models, getModelByID } = useModel();
+
     const [currentModel, setCurrentModel] = useState<Model>(models.filter(model => model._id === modelID)[0])
+    const [ modalOpen, setModalOpen ] = useState<boolean>(false)
+
     const pageRef = useRef<HTMLDivElement | null>(null)
-     
+    
+    
+    
 
     useEffect( () => {
         
@@ -62,9 +69,8 @@ const ModelPage = () => {
 
                 <div className='file--container'>
 
-                    <div className='file--img'>
-                        <img src={FileIcon} />
-                        <a href={`http://localhost:3000/modelFiles/${currentModel?.modelFile}`} download > <Button> Download <GoDownload className='download--ico'/> </Button> </a> 
+                    <div className='file--img' onClick={() => setModalOpen(true)}> 
+                        {!modalOpen && currentModel ? <Preview fileURL = {`http://localhost:3000/modelFiles/${currentModel?.glbFile}`} /> : ''}
                     </div>
 
                     <div className='about--file'>
@@ -73,12 +79,21 @@ const ModelPage = () => {
                             <p className='file--size'>{currentModel?.fileSize / 1000} KB</p>
                             <p className='file--creator'>- {currentModel?.publishedBy}</p>
                             <p className='file--date'>{readableDateGen(new Date(currentModel?.postedOn))}</p>
+                            <div>
+                                <a href={`http://localhost:3000/modelFiles/${currentModel?.modelFile}`} download > <Button> Download <GoDownload className='download--ico'/> </Button> </a> 
+                            </div>
                     </div>
+ 
 
                 </div>
 
+                <div className='threeD-viewer'>
+                    <Modal isOpen = { modalOpen } closeModalFn = {setModalOpen}>
+                        <Viewer fileURL = {`http://localhost:3000/modelFiles/${currentModel?.glbFile}` } /> 
+                    </Modal>
+                </div>
 
-                {/* <a download href={`http://localhost:3000/modelFiles/${currentModel?.modelFile}`}>Download</a> */}
+ 
             </div>
         </div>
     )

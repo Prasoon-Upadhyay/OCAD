@@ -1,0 +1,24 @@
+
+.empty--reqs {
+
+    grid-column: 1/ span 3;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    text-align: center;
+
+    font-family: var(--ff--monospace);
+}
+
+
+.empty--reqs svg {
+    font-size: 3rem;
+    transform: translateY(15px);
+}
+
+.empty--img {
+    grid-column: 1 / span 3;
+    align-self: center;
+    margin: 10px;
+    width: 30%;
+}

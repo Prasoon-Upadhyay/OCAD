@@ -1,0 +1,51 @@
+
+.viewer--modal {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal-root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close--btn {
+    font-size: 2rem;
+    align-self: end;
+    justify-content: end;
+    transition: 200ms opacity linear;
+    cursor: pointer;
+}
+
+.modal--content {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 8px 0 rgba(111, 97, 97, 0.2), 0 6px 20px 0 rgba(27, 27, 27, 0.19);
+    border-radius: 2rem;
+    padding: 2rem;
+    background-color: #000;
+    text-align: center; 
+    transition: 300ms opacity linear;
+    opacity: 0;
+}
+ 
+
+.fadeIn {
+    opacity: 1
+}
+
+
+
+.close--btn:hover {
+    opacity: .75;
+}

@@ -34,7 +34,7 @@ const Table =  () => {
 
     let renderedModels; 
 
-    const btnGrp = Array(Math.ceil(totalDBModels/4)).fill(0).map( (_, i) => <td className={`grouped--btn ${i + 1}`} onClick={() => {setPage(i + 1)}}> {i + 1} </td> )
+    const btnGrp = Array(Math.ceil(totalDBModels/3)).fill(0).map( (_, i) => <td className={`grouped--btn ${i + 1}`} onClick={() => {setPage(i + 1)}}> {i + 1} </td> )
   
     if (models?.length > 0) renderedModels = models?.map( (model, i) => <TableRow model={model} index={i} />) 
     

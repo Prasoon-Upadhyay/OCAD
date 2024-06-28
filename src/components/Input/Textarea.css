@@ -1,0 +1,20 @@
+
+
+
+.--textarea {
+
+    background-color: inherit;
+    outline: none;
+
+    color: #fff;
+    font-family: var(--ff--monospace);
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, .5) ;
+    transition: border 300ms linear;
+}
+
+
+.--textarea:focus {
+
+    border: 1px solid #fff;
+}

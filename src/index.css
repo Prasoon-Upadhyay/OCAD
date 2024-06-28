@@ -90,23 +90,7 @@ body {
     color: var(--clr--fg);
     overflow-x: hidden;  
 }
-
-.btn {
-    border-radius: 2rem;
-    background-color: #000;
-    border: 1px solid #fff;
-    padding: .5rem 2rem;
-    font-family: var(--ff--secondary);
-    color: #fff;
-    cursor: pointer;
-    transition: opacity .3s ease-in-out;
-}
-
-.btn:hover {
-    opacity: .7;
-}
-
-
+ 
 .pageLoad {
 
   opacity: 1

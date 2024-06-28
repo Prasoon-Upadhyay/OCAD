@@ -2,6 +2,7 @@
 import { ReactNode, createContext, useState } from "react";
 import { Model } from "../assets/utils/types";
 import axios from "axios";
+import useError from "../hooks/useError";
  
 
 
@@ -40,6 +41,8 @@ const ModelProvider = ( { children } : { children : ReactNode } ) => {
     const [ models, setModels ] = useState<Model[] | []>([])
     const [ totalDBModels, setTotalDBModels ] = useState<number>(0);
 
+    const { globalErrorHandler } = useError();
+
     const URL = 'http://localhost:3000/api/v1';
 
 
@@ -60,8 +63,8 @@ const ModelProvider = ( { children } : { children : ReactNode } ) => {
             setTotalDBModels(response.data.totalModels)
         }
 
-        catch (e) {
-            console.log(e);
+        catch (e: Error) {
+            globalErrorHandler(e);
             
         }
 
@@ -82,8 +85,8 @@ const ModelProvider = ( { children } : { children : ReactNode } ) => {
             setter(response.data.file)
         }
 
-        catch (e) {
-            console.log(e);
+        catch (e: Error) {
+            globalErrorHandler(e)
             
         }
 
@@ -105,8 +108,8 @@ const ModelProvider = ( { children } : { children : ReactNode } ) => {
             setModels(response.data.models)
         }
 
-        catch (e) {
-            console.log(e);
+        catch (e: Error) {
+            globalErrorHandler(e)
             
         }
     }
